@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{588667CB-B694-40C4-835F-A955D4150516}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1ED27A63-D552-45FD-B04A-B793A46FCD41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms", "src\MyStack.DynamicForms\MyStack.DynamicForms.csproj", "{658ABC65-5C8C-4B24-856E-F1D47A446FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms.MySql", "src\MyStack.DynamicForms.MySql\MyStack.DynamicForms.MySql.csproj", "{67D87539-9279-49B7-9C1A-4C39F5DBA9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms.MySql.Test", "test\MyStack.DynamicForms.MySql.Test\MyStack.DynamicForms.MySql.Test.csproj", "{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{658ABC65-5C8C-4B24-856E-F1D47A446FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658ABC65-5C8C-4B24-856E-F1D47A446FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658ABC65-5C8C-4B24-856E-F1D47A446FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658ABC65-5C8C-4B24-856E-F1D47A446FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{658ABC65-5C8C-4B24-856E-F1D47A446FFD} = {588667CB-B694-40C4-835F-A955D4150516}
+		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE} = {588667CB-B694-40C4-835F-A955D4150516}
+		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2} = {1ED27A63-D552-45FD-B04A-B793A46FCD41}
+	EndGlobalSection
+EndGlobal
