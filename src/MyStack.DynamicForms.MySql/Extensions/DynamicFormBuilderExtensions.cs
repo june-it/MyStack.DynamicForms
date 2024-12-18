@@ -1,13 +1,13 @@
-﻿using Blueprint.DynamicForms;
-using Blueprint.DynamicForms.Fields;
-using Blueprint.DynamicForms.MySql;
-using Blueprint.DynamicForms.MySql.DynamicForms;
-using Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes;
-using Blueprint.DynamicForms.MySql.Queries;
-using Blueprint.DynamicForms.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MyStack.DynamicForms;
+using MyStack.DynamicForms.Fields;
+using MyStack.DynamicForms.MySql;
+using MyStack.DynamicForms.MySql.DynamicForms;
+using MyStack.DynamicForms.MySql.ColumnTypes;
+using MyStack.DynamicForms.MySql.Queries;
+using MyStack.DynamicForms.Queries;
 
-namespace Blueprint
+namespace MyStack
 {
     public static class DynamicFormBuilderExtensions
     {
@@ -17,8 +17,8 @@ namespace Blueprint
             configure?.Invoke(options);
             if (configure != null)
                 builder.Services.Configure(configure);
-            builder.Services.AddTransient<IFormRepository, MySqlFormRepository>();
-            builder.Services.AddTransient<IExpandoRepository, MySqlExpandoRepository>();
+            builder.Services.AddTransient<IFormStore, MySqlFormStore>();
+            builder.Services.AddTransient<IExpandoStore, MySqlExpandoStore>();
             builder.Services.AddTransient<DefaultColumnTypeManager>();
             builder.Services.AddTransient<IColumnTypeManager>(factory =>
             {
@@ -37,7 +37,7 @@ namespace Blueprint
             });
 
             builder.Services.AddTransient<ISqlQueryHandler, MySqlQueryHandler>();
-            builder.Services.AddTransient<IQueryRepository, MySqlQueryRepository>();
+            builder.Services.AddTransient<IQueryStore, MySqlQueryStore>();
 
             return builder;
         }

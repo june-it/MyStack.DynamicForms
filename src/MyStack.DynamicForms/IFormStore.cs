@@ -1,6 +1,6 @@
-﻿namespace Blueprint.DynamicForms
+﻿namespace MyStack.DynamicForms
 {
-    public interface IFormRepository
+    public interface IFormStore
     {
         Task InsertAsync(Form form);
         Task UpdateAsync(Form form);

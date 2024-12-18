@@ -1,6 +1,6 @@
 ﻿using System.Dynamic;
 
-namespace Blueprint.DynamicForms.Queries
+namespace MyStack.DynamicForms.Queries
 {
     public interface ISqlQueryHandler
     {

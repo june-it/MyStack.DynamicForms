@@ -1,14 +1,13 @@
-﻿using Blueprint.DynamicForms;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms
+namespace MyStack.DynamicForms.MySql.DynamicForms
 {
-    public abstract class FormRepositoryBase
+    public abstract class FormStoreBase
     {
         protected string Prefix = "Forms_";
-        public FormRepositoryBase(IOptions<MySqlOptions> options)
+        public FormStoreBase(IOptions<MySqlOptions> options)
         {
             ConnectionString = options.Value.ConnectionString;
         }

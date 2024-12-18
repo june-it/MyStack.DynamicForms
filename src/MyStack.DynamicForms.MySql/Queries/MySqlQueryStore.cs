@@ -1,19 +1,19 @@
 ﻿using System.Data;
-using Blueprint.DynamicForms.Queries;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
+using MyStack.DynamicForms.Queries;
 
-namespace Blueprint.DynamicForms.MySql.Queries
+namespace MyStack.DynamicForms.MySql.Queries
 {
-    public class MySqlQueryRepository : IQueryRepository
+    public class MySqlQueryStore : IQueryStore
     {
-        public MySqlQueryRepository(IOptions<MySqlOptions> options)
+        public MySqlQueryStore(IOptions<MySqlOptions> options)
         {
             ConnectionString = options.Value.ConnectionString;
         }
         protected string ConnectionString { get; }
 
-        public async Task<List<Query>> GetListAsync(int skip, int take, string? keyword = null)
+        public async Task<List<Query>?> GetListAsync(int skip, int take, string? keyword = null)
         {
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
@@ -39,7 +39,7 @@ namespace Blueprint.DynamicForms.MySql.Queries
                 return items;
             }
         }
-        public async Task<Query> GetAsync(string name)
+        public async Task<Query?> GetAsync(string name)
         {
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
@@ -56,7 +56,7 @@ namespace Blueprint.DynamicForms.MySql.Queries
                     var value = Convert.ToString(dataSet.Tables[0].Rows[0]["Value"]) ?? "";
                     return new Query(name, value);
                 }
-                return default!;
+                return default;
             }
         }
 

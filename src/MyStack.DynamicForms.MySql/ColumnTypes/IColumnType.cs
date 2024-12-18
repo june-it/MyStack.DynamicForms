@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes
+﻿namespace MyStack.DynamicForms.MySql.ColumnTypes
 {
     public interface IColumnType
     {

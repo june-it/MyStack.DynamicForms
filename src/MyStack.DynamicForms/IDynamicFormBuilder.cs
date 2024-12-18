@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Blueprint.DynamicForms
+namespace MyStack.DynamicForms
 {
     public interface IDynamicFormBuilder
     {

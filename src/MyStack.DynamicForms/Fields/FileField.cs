@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Fields
+﻿namespace MyStack.DynamicForms.Fields
 {
     public class FileField : FieldBase
     {

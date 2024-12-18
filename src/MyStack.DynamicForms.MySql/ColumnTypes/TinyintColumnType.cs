@@ -1,6 +1,6 @@
-﻿using Blueprint.DynamicForms.Fields;
+﻿using MyStack.DynamicForms.Fields;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes
+namespace MyStack.DynamicForms.MySql.ColumnTypes
 {
     public class TinyintColumnType : ColumnTypeBase
     {

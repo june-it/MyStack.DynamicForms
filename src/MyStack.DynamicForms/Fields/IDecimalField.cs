@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Fields
+﻿namespace MyStack.DynamicForms.Fields
 {
     public interface IDecimalField
     {

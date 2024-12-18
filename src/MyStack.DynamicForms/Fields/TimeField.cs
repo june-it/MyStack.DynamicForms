@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Fields
+﻿namespace MyStack.DynamicForms.Fields
 {
     public class TimeField : FieldBase
     {
@@ -6,7 +6,6 @@
         {
             DefaultValue = defaultValue;
         }
-
         public TimeSpan? DefaultValue { get; set; }
         public override object? GetDefaultValue() => DefaultValue;
     }

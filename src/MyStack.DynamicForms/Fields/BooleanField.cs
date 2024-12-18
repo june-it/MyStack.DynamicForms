@@ -1,14 +1,12 @@
-﻿namespace Blueprint.DynamicForms.Fields
+﻿namespace MyStack.DynamicForms.Fields
 {
     public class BooleanField : FieldBase
     {
-
         public BooleanField(string name, string displayName, bool? defaultValue, string? id = null)
             : base(name, displayName, FieldType.Boolean, id)
         {
             DefaultValue = defaultValue;
         }
-
         public bool? DefaultValue { get; set; }
         public override object? GetDefaultValue() => DefaultValue;
         public override void TestValue(object? value)

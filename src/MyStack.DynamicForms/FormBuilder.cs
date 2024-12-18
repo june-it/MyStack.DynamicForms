@@ -1,6 +1,6 @@
-﻿using Blueprint.DynamicForms.Fields;
+﻿using MyStack.DynamicForms.Fields;
 
-namespace Blueprint.DynamicForms
+namespace MyStack.DynamicForms
 {
     public class FormBuilder
     {

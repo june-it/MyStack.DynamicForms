@@ -1,7 +1,7 @@
-﻿using Blueprint.DynamicForms.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MyStack.DynamicForms.Queries;
 
-namespace Blueprint.DynamicForms.MySql.Test
+namespace MyStack.DynamicForms.MySql.Test
 {
     [TestClass]
     public class QueryBusTest : TestBase
@@ -10,7 +10,7 @@ namespace Blueprint.DynamicForms.MySql.Test
         public async Task QueryList()
         {
             var queryBus = ServiceProvider!.GetRequiredService<IQueryBus>();
-            var items = await queryBus.QueryAsync("GetUsers", 0,10);
+            var items = await queryBus.QueryAsync("GetUsers", 0, 10);
         }
         [TestMethod]
         public async Task QueryById()

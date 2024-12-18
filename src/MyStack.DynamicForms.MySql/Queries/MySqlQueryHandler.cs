@@ -1,10 +1,10 @@
 ﻿using System.Data;
 using System.Dynamic;
-using Blueprint.DynamicForms.Queries;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
+using MyStack.DynamicForms.Queries;
 
-namespace Blueprint.DynamicForms.MySql.Queries
+namespace MyStack.DynamicForms.MySql.Queries
 {
     public class MySqlQueryHandler : ISqlQueryHandler
     {

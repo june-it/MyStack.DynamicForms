@@ -1,18 +1,16 @@
 ﻿using System.Data;
 using System.Dynamic;
 using System.Text;
-using Blueprint.DynamicForms;
 using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms
+namespace MyStack.DynamicForms.MySql.DynamicForms
 {
-    public class MySqlExpandoRepository : FormRepositoryBase, IExpandoRepository
+    public class MySqlExpandoStore : FormStoreBase, IExpandoStore
     {
-        public MySqlExpandoRepository(IOptions<MySqlOptions> options) : base(options)
+        public MySqlExpandoStore(IOptions<MySqlOptions> options) : base(options)
         {
         }
-
         public async Task InsertAsync(string formName, ExpandoObject expando)
         {
             if (expando == null) throw new ArgumentNullException(nameof(expando), "表单对象为空");

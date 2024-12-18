@@ -1,17 +1,17 @@
-﻿using Blueprint.DynamicForms.Fields;
-using Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using MySql.Data.MySqlClient;
+using MyStack.DynamicForms.Fields;
+using MyStack.DynamicForms.MySql.ColumnTypes;
 using Newtonsoft.Json;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms
+namespace MyStack.DynamicForms.MySql.DynamicForms
 {
-    public class MySqlFormRepository : FormRepositoryBase,IFormRepository
+    public class MySqlFormStore : FormStoreBase, IFormStore
     {
-       
+
         protected IColumnTypeManager ColumnTypeDefinitionManager { get; }
-        public MySqlFormRepository(IOptions<MySqlOptions> options, IColumnTypeManager columnTypeDefinitionManager)
-            :base(options) 
+        public MySqlFormStore(IOptions<MySqlOptions> options, IColumnTypeManager columnTypeDefinitionManager)
+            : base(options)
         {
             ColumnTypeDefinitionManager = columnTypeDefinitionManager;
         }

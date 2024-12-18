@@ -1,13 +1,13 @@
-﻿using Blueprint.DynamicForms.Fields;
+﻿using MyStack.DynamicForms.Fields;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes
+namespace MyStack.DynamicForms.MySql.ColumnTypes
 {
-    public class DefaultColumnTypeManager : IColumnTypeManager
+    public class DefaultColumnTypeManager : IColumnTypeManager, IColumnTypeDefinitionRegistrar
     {
         private Dictionary<FieldType, Type>? ColumnTypeDefinitionTypes { get; set; }
         public void AddColumnTypeDefinition<TColumnTypeDefinition>(FieldType fieldType) where TColumnTypeDefinition : IColumnType
         {
-            ColumnTypeDefinitionTypes ??= new Dictionary<FieldType, Type>();
+            ColumnTypeDefinitionTypes ??= [];
             ColumnTypeDefinitionTypes.TryAdd(fieldType, typeof(TColumnTypeDefinition));
         }
 
@@ -16,9 +16,7 @@ namespace Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes
             IColumnType columnTypeDefinition;
             if (ColumnTypeDefinitionTypes != null && ColumnTypeDefinitionTypes.TryGetValue(field.FieldType, out var columnTypeDefinitionType))
             {
-                var obj = Activator.CreateInstance(columnTypeDefinitionType, [field]);
-                if (obj == null)
-                    throw new InvalidOperationException($"无法创建{columnTypeDefinitionType.FullName}的实例对象");
+                var obj = Activator.CreateInstance(columnTypeDefinitionType, [field]) ?? throw new InvalidOperationException($"无法创建{columnTypeDefinitionType.FullName}的实例对象");
                 columnTypeDefinition = (IColumnType)obj;
             }
             else

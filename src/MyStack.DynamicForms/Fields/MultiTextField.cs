@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Fields
+﻿namespace MyStack.DynamicForms.Fields
 {
     public class MultiTextField : FieldBase
     {
@@ -7,7 +7,6 @@
         {
             DefaultValue = defaultValue;
         }
-
         public string? DefaultValue { get; set; }
         public override object? GetDefaultValue() => DefaultValue;
     }

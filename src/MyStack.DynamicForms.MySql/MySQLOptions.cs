@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.MySql
+﻿namespace MyStack.DynamicForms.MySql
 {
     public class MySqlOptions
     {

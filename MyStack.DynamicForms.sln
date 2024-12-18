@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms.MySql"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms.MySql.Test", "test\MyStack.DynamicForms.MySql.Test\MyStack.DynamicForms.MySql.Test.csproj", "{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack.DynamicForms.AspNetCore", "src\MyStack.DynamicForms.AspNetCore\MyStack.DynamicForms.AspNetCore.csproj", "{A8EA17C3-5012-4A25-A2C8-1CEDA601E286}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EA17C3-5012-4A25-A2C8-1CEDA601E286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EA17C3-5012-4A25-A2C8-1CEDA601E286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EA17C3-5012-4A25-A2C8-1CEDA601E286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EA17C3-5012-4A25-A2C8-1CEDA601E286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,6 @@ Global
 		{658ABC65-5C8C-4B24-856E-F1D47A446FFD} = {588667CB-B694-40C4-835F-A955D4150516}
 		{67D87539-9279-49B7-9C1A-4C39F5DBA9CE} = {588667CB-B694-40C4-835F-A955D4150516}
 		{AE0ABA85-DEEF-4632-A8FD-3CFD2B0CD0E2} = {1ED27A63-D552-45FD-B04A-B793A46FCD41}
+		{A8EA17C3-5012-4A25-A2C8-1CEDA601E286} = {588667CB-B694-40C4-835F-A955D4150516}
 	EndGlobalSection
 EndGlobal

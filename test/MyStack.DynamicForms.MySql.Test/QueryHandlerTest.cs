@@ -1,7 +1,7 @@
-﻿using Blueprint.DynamicForms.Queries;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MyStack.DynamicForms.Queries;
 
-namespace Blueprint.DynamicForms.MySql.Test
+namespace MyStack.DynamicForms.MySql.Test
 {
     [TestClass]
     public class QueryHandlerTest : TestBase

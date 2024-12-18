@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Queries
+﻿namespace MyStack.DynamicForms.Queries
 {
     public class SqlQuery
     {

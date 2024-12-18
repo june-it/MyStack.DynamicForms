@@ -1,4 +1,4 @@
-﻿namespace Blueprint.DynamicForms.Queries
+﻿namespace MyStack.DynamicForms.Queries
 {
     public class Query
     {
@@ -14,6 +14,6 @@
             if (string.IsNullOrEmpty(value)) throw new ArgumentNullException(nameof(value), "值不能为空");
             Value = value;
         }
-        
+
     }
 }

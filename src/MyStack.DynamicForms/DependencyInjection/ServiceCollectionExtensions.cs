@@ -1,12 +1,11 @@
-﻿using Blueprint;
-using Blueprint.DynamicForms;
-using Blueprint.DynamicForms.Queries;
+﻿using MyStack.DynamicForms;
+using MyStack.DynamicForms.Queries;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddBlueprint(this IServiceCollection services, Action<IDynamicFormBuilder> configureBuilder)
+        public static IServiceCollection AddDynamicForm(this IServiceCollection services, Action<IDynamicFormBuilder> configureBuilder)
         {
             var builder = new DynamicFormBuilder(services);
             configureBuilder?.Invoke(builder);

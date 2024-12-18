@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Blueprint.DynamicForms.MySql.Test
+namespace MyStack.DynamicForms.MySql.Test
 {
     public abstract class TestBase
     {
@@ -18,11 +18,11 @@ namespace Blueprint.DynamicForms.MySql.Test
               })
               .ConfigureServices((context, services) =>
               {
-                  services.AddBlueprint(configureBuilder =>
+                  services.AddDynamicForm(configureBuilder =>
                   {
                       configureBuilder.UseMySql(configure =>
                       {
-                          configure.ConnectionString = context.Configuration.GetConnectionString("Default");
+                          configure.ConnectionString = context.Configuration.GetConnectionString("Default")!;
 
                       });
                   });

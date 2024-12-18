@@ -1,8 +1,8 @@
-﻿using Blueprint.DynamicForms.Fields;
+﻿using MyStack.DynamicForms.Fields;
 
-namespace Blueprint.DynamicForms.MySql.DynamicForms.ColumnTypes
+namespace MyStack.DynamicForms.MySql.ColumnTypes
 {
-    public interface IColumnTypeManager : IColumnTypeDefinitionRegistrar
+    public interface IColumnTypeManager
     {
         IColumnType GetColumnTypeDefinition(FieldBase field);
     }
